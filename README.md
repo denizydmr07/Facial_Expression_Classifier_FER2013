@@ -7,7 +7,7 @@ Hyperparameter tuning is a crucial aspect of optimizing model performance. The f
 - *Learning Rate:* I set the learning rate of the Adam optimizer to 0.0001.
 - *Batch Size:* I chose the batch size of 512 for both training and validation data generators.
 - *Epochs:* The model was trained for 20 epochs.
-- *Fine-tuning:* I set the first 10 layers until the layer "blovk4_conv1" as non-trainable.
+- *Fine-tuning:* I set the first 10 layers until the layer "block4_conv1" as non-trainable.
 - *Model complexity:* I chose the length of my hidden layer as 32, and FCL depth as 2.
 
 ### Model Architecture and Fine-Tuning
