@@ -41,4 +41,5 @@ Here are three sample images along with their corresponding model predictions:
 - Image 2 Prediction: Sad
 - Image 3 Prediction: Sad
 
-
+### Usage
+You can dowload the model [here](https://drive.google.com/file/d/1PJ2Q8NgIRdRXREB37UyivO6Vsm9_7dH3/view?usp=sharing) and use it in like simple_predictions.ipynb. I didn't include the model in repo since it is more than 150MB.
