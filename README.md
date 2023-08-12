@@ -3,7 +3,7 @@
 This repository contains code for training an emotion recognition model using the [FER2013](https://www.kaggle.com/datasets/msambare/fer2013) dataset and the [VGG16](https://arxiv.org/abs/1409.1556) architecture. The primary objective is to classify facial expressions into seven different emotions: angry, disgust, fear, happy, sad, surprise, and neutral.
 
 ### Hyperparameter Tuning
-Hyperparameter tuning is a crucial aspect of optimizing model performance. The following hyperparameters were fine-tuned for this project:
+
 - *Learning Rate:* I set the learning rate of the Adam optimizer to 1e-4.
 - *Batch Size:* I chose the batch size of 512 for both training and validation data generators.
 - *Epochs:* The model was trained for 20 epochs.
@@ -17,7 +17,7 @@ The core architecture of the model is based on the VGG16 architecture. The initi
 No data augmentation techniques were applied during training. The Adam optimizer was employed with a categorical cross-entropy loss function. Model was saved based on the best validation accuracy using the ModelCheckpoint callback.
 
 ### Results and Evaluation
-After training for 20 epochs, the model demonstrated a significant overfitting with 0.99 accuracy on training set and 0.65 accuracy on validation set. No matter how I tuned the hyper parameters, I couldn't go above 0.65 accuracy on validation set or go below 1.100 validation loss. Some of my decision was just poor, some of them I don't have enough compitational resources to implement them. 0.65 accuracy may sound extremely low, however, human-level accuracy on FER2013 is only at 65±5% according to this [report](http://cs230.stanford.edu/projects_winter_2020/reports/32610274.pdf). So, my accuracy is just low. Below are some example configurations and their accuracy after 20 epochs:
+After training for 20 epochs, the model demonstrated a significant overfitting with 0.99 accuracy on training set and 0.65 accuracy on validation set. No matter how I tuned the hyperparameters, I couldn't go above 0.65 accuracy on validation set or go below 1.100 on validation loss. Some of my decision was just poor, some of them I don't have enough compitational resources to implement them. 0.65 accuracy may sound "extremely low", however, human-level accuracy on FER2013 is only at 65±5% according to this [report](http://cs230.stanford.edu/projects_winter_2020/reports/32610274.pdf). So, my accuracy is just "low". Below are some example configurations and their accuracy after 20 epochs:
 
 | Batch Normalization Layer | LR | Batch Size | Hidden Layer Length | Dropout Layer Rate | Regularization | Train Acc | Val Acc |
 | ------------------------- | -- | ---------- | ------------------- | ------------------ | -------------- | --------- | ------- |
@@ -39,7 +39,7 @@ Here are three sample images along with their corresponding model predictions:
 
 - Image 1 Prediction: Happy
 - Image 2 Prediction: Sad
-- Image 3 Prediction: Sad
+- Image 3 Prediction: Sad (Wrong)
 
 ### Usage
-You can dowload the model [here](https://drive.google.com/file/d/1PJ2Q8NgIRdRXREB37UyivO6Vsm9_7dH3/view?usp=sharing) and use it in like simple_predictions.ipynb. I didn't include the model in repo since it is more than 150MB.
+You can dowload the model from [here](https://drive.google.com/file/d/1PJ2Q8NgIRdRXREB37UyivO6Vsm9_7dH3/view?usp=sharing) and use it in like simple_predictions.ipynb. I didn't include the model in repo since it is more than 150MB.
