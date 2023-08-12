@@ -4,14 +4,14 @@ This repository contains code for training an emotion recognition model using th
 
 ### Hyperparameter Tuning
 Hyperparameter tuning is a crucial aspect of optimizing model performance. The following hyperparameters were fine-tuned for this project:
-- *Learning Rate:* I set the learning rate of the Adam optimizer to 0.0001.
+- *Learning Rate:* I set the learning rate of the Adam optimizer to 1e-4.
 - *Batch Size:* I chose the batch size of 512 for both training and validation data generators.
 - *Epochs:* The model was trained for 20 epochs.
 - *Fine-tuning:* I set the first 10 layers until the layer "block4_conv1" as non-trainable.
 - *Model complexity:* I chose the length of my hidden layer as 32, and FCL depth as 2.
 
 ### Model Architecture and Fine-Tuning
-The core architecture of the model is based on the VGG16 architecture. The initial layers of VGG16 serve as a feature extractor and frozen. Remaining layers are trained along with fully connected layers, which consists of 32 node length layer with Leaky ReLu activation, a batch normalization layer, and a final 7 node (length of classes) length layer with softmax activation.
+The core architecture of the model is based on the VGG16 architecture. The initial layers of VGG16 serve as feature extractors and are frozen. Remaining layers are trained along with fully connected layers, which consists of 32 node length layer with Leaky ReLu activation, a batch normalization layer, and a final 7 node (length of classes) length layer with softmax activation.
 
 ### Training
 No data augmentation techniques were applied during training. The Adam optimizer was employed with a categorical cross-entropy loss function. Model was saved based on the best validation accuracy using the ModelCheckpoint callback.
